@@ -1,12 +1,45 @@
 {
-	"style" : "default",
-	"config" : "save_demo.dat",
-	"width" : 540,
-	"height" : 960,
-	"cancelscroll" : true,
-	"countdown" : 10,
-	"cancelname" : "取消",
-	"okname" : "确定",
-	"views" : [
-	]
+   "style" : "custom", //样式属性。custom为自定义 default为默认。新手可以使用默认
+   "config" : "save_111.dat",
+   "width" : 1080,
+   "height" : 768, //界面宽高 建议和背景图片尺寸保持一致
+   "bg" : "bg.jpg", //这是背景图片（可以不填）
+   "cancelname" : "取消", //这是取消的文字
+   "okname" : "确定", //这是确定的文字
+   "views" : [
+      {
+         "type" : "Page",
+         "style" : "custom",
+         "text" : "基础设置",
+         "views" : [
+            {
+               "align" : "left",
+               "color" : "0,0,0",
+               "size" : 50,
+               "text" : "点击次数",
+               "type" : "Label",
+               "rect" : "40,40,260,80"
+            },
+            {
+               "id" : "selectClickTimes",
+               "text" : "点击次数",
+               "list" : "0次,1次,2次,3次,4次,5次,6次,7次,8次,9次,10次",
+               "select" : "0@1@2@3@4@5@6@7@8@9@10",
+               "size" : 50,
+               "type" : "ComboBox",
+               "rect" : "300,40,600,80"
+            },
+            {
+               "id" : "selectClickTimes2",
+               "list" : "不知道干啥,吃点什么好,大盘鸡",
+               "select" : "0@2",
+               "size" : 50,
+               "type" : "CheckBoxGroup",
+               "orientation" : "horizontal",
+               "color" : "0,0,225",
+               "rect" : "40,180,1080,80"
+            }
+         ]
+      }
+   ]
 }
